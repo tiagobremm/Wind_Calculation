@@ -41,7 +41,7 @@ class WindCalculator:
         return round(mean_wind_ms, 2)
 
 
-## Usage
+## How to use
 calc = WindCalculator()
 
 calc.mean_wind_speed(-3.19, 1.16)
