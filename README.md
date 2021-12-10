@@ -1,5 +1,8 @@
 # Wind_Calculation
-Calculation of wind direction, U and V components and average wind speed
+Calculation of wind direction, U and V components and average wind speed. 
+
+If you want to adapt the code to another software, make sure he uses the programming language convention: atan2(y,x) needs to return the arctangent of y/x.
+Spreadsheets, including Microsoft Excel, LibreOffice Calc and Google Docs switch the arguments, so that atan2(x,y) is the arctangent of y/x (most details are described in the reference). To test it, compute atan2(1,-1). If the result is 2.36 radians (135 degrees) you can use these formulas unchanged.
 
     All speeds must be in m/s
     The direction must be in degrees
