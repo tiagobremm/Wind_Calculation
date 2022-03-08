@@ -41,10 +41,19 @@ class WindCalculator:
         return round(mean_wind_ms, 2)
 
 
-## How to use
+## Apply over array
 calc = WindCalculator()
 
 calc.mean_wind_speed(-3.19, 1.16)
 calc.wind_component_speed(3.4, 110)
 calc.wind_direction(-3.19, 1.16)
 calc.wind_direction(-1, 0)
+
+## How to apply over array with multiple lines
+test = np.vectorize(calc.wind_direction)
+u_s = np.array([fluxos.u_unrot])
+v_s = np.array([fluxos.v_unrot])
+
+dir_vento = test(u_s, v_s)
+
+
